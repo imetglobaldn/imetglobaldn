@@ -70,7 +70,7 @@
     },
 
     {
-      "source": "/:path*\\.(?:jpg|jpeg|png|webp|svg|ico|gif|avif)(\\?.*)?$",
+      "source": "/:path*.(jpg|jpeg|png|webp|svg|ico|gif|avif)",
       "headers": [
         {
           "key": "Cache-Control",
