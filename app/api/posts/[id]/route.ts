@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import { blogPosts } from "../../../../data/blogs";
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 }
 
 export async function DELETE(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = ${JSON.stringify(blogPosts, null, 2)};`;
 }
 
 export async function PUT(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
